@@ -1,57 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JxW | Official Website</title>
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
 </head>
+
 <body>
-    
-    <header class="shadow-md text-black p-6">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-4 pl-20">
-                <img src="../assets/img/logo.png" alt="Logo">
-            </div>
-            <nav class="space-x-6 pr-28 font-[--font-primary] font-bold text-md">
-                <a href="#" 
-            class="relative before:content-[''] before:absolute before:left-0 before:-bottom-1
-            before:h-[2px] before:w-0 before:bg-[var(--primary-hover)]
+
+    <main class="min-h-screen bg-gradient-to-b from-background via-background/95 to-background/90 
+    dark:from-black dark:via-gray-900/95 dark:to-gray-900/90 pt-0 pb-16 relative overflow-hidden">
+
+    <!-- NAVBAR -->
+     <nav class="fixed top-0 left-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 font-[--font-primary] font-bold text-md">
+
+                <!--Logo-->
+                <div class="flex items-center space-x-2 font-bold text-xl text-[var(--primary-800)] cursor-pointer">
+                    <a href="./index.html" class="flex items-center cursor-pointer">
+                        <img src="../assets/img/logo.png" alt="Logo" class="h-12 w-24 object-contain"/>JxW
+                    </a>
+                </div>
+
+                <!-- Desktop -->
+                <div class="hidden md:flex items-center space-x-6 text-[var(--gray-800)]">
+                    <a href="#" class= "relative before:content-[''] before:absolute before:left-0 before:-bottom-1
+            before:h-[2px] before:w-0 before:bg-[var(--primary-900)] hover:text-[var(--primary-900)]
             before:transition-all before:duration-300 
             hover:before:w-full">Home</a>
-                <a href="#" 
-          class="relative before:content-[''] before:absolute before:left-0 before:-bottom-1 
-          before:h-[2px] before:w-0 before:bg-[var(--primary-hover)]
-          before:transition-all before:duration-300 
-          hover:before:w-full">About</a>
-                <a href="#" 
-          class="relative before:content-[''] before:absolute before:left-0 before:-bottom-1 
-          before:h-[2px] before:w-0 before:bg-[var(--primary-hover)]
-          before:transition-all before:duration-300 
-          hover:before:w-full">Gallery</a>
-                <a href="#" 
-          class="relative before:content-[''] before:absolute before:left-0 before:-bottom-1 
-          before:h-[2px] before:w-0 before:bg-[var(--primary-hover)]
-          before:transition-all before:duration-300 
-          hover:before:w-full">Side Quest</a>
-                <a href="./playlist.html" 
-          class="relative before:content-[''] before:absolute before:left-0 before:-bottom-1
-          before:h-[2px] before:w-0 before:bg-[var(--primary-hover)]
-          before:transition-all before:duration-300 
-          hover:before:w-full">Playlist</a>
-                <a href="#" 
-          class="relative before:content-[''] before:absolute before:left-0 before:-bottom-1
-          before:h-[2px] before:w-0 before:bg-[var(--primary-hover)] 
-          before:transition-all before:duration-300 
-          hover:before:w-full">Interests</a>
-            </nav>
+                    <a href="#" class="relative before:content-[''] before:absolute before:left-0 before:-bottom-1
+            before:h-[2px] before:w-0 before:bg-[var(--primary-900)] hover:text-[var(--primary-900)]
+            before:transition-all before:duration-300 
+            hover:before:w-full">About</a>
+                    <a href="#" class="relative before:content-[''] before:absolute before:left-0 before:-bottom-1
+            before:h-[2px] before:w-0 before:bg-[var(--primary-900)] hover:text-[var(--primary-900)]
+            before:transition-all before:duration-300 
+            hover:before:w-full">Gallery</a>
+                    <a href="#" class="relative before:content-[''] before:absolute before:left-0 before:-bottom-1
+            before:h-[2px] before:w-0 before:bg-[var(--primary-900)] hover:text-[var(--primary-900)]
+            before:transition-all before:duration-300 
+            hover:before:w-full">Side Quest</a>
+                    <a href="./playlist.html" class="relative before:content-[''] before:absolute before:left-0 before:-bottom-1
+            before:h-[2px] before:w-0 before:bg-[var(--primary-900)] hover:text-[var(--primary-900)]
+            before:transition-all before:duration-300 
+            hover:before:w-full">Playlist</a>
+                    <a href="#" class="relative before:content-[''] before:absolute before:left-0 before:-bottom-1
+            before:h-[2px] before:w-0 before:bg-[var(--primary-900)] hover:text-[var(--primary-900)]
+            before:transition-all before:duration-300 
+            hover:before:w-full">Interests</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center md:hidden">
+                    <button id="menu-btn" class="text-[var(--primary-900)] cursor-pointer focus:outline-none ">
+                        <svg id="menu-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+
+                        <svg id="menu-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
         </div>
-    </header>
+
+                <!-- MOBILE MENU PANEL -->
+            <div id="mobile-menu" class="hidden md:hidden bg-gradient-to-b from-background via-background/95 to-background/90 
+             dark:from-black dark:via-gray-900/95 dark:to-gray-900/90 shadow-md">
+                <div class="px-4 pt-2 pb-4 space-y-4 text-center">
+                    <a href="./index.html" class="block text-[var(--gray-800)] hover:text-[var(--primary-900)]
+                        before:transition-all before:duration-300 ">Home</a>
+                    <a href="#" class="block text-[var(--gray-800)] hover:text-[var(--primary-900)]
+                        before:transition-all before:duration-300 ">About</a>
+                    <a href="#" class="block text-[var(--gray-800)] hover:text-[var(--primary-900)]
+                        before:transition-all before:duration-300 ">Gallery</a>
+                    <a href="#" class="block text-[var(--gray-800)] hover:text-[var(--primary-900)]
+                        before:transition-all before:duration-300 ">Side Quest</a>
+                    <a href="./playlist.html" class="block text-[var(--gray-800)] hover:text-[var(--primary-900)]
+                        before:transition-all before:duration-300 ">Playlist</a>
+                    <a href="#" class="block text-[var(--gray-800)] hover:text-[var(--primary-900)]
+                        before:transition-all before:duration-300 ">Interests</a>
+                </div>
+            </div>
+     </nav>
 
 
 
 
-    
+
+
+
+
+
+
+     <script>
+    // JS for Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuOpenIcon = document.getElementById('menu-open');
+    const menuCloseIcon = document.getElementById('menu-close');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuOpenIcon.classList.toggle('hidden');
+      menuCloseIcon.classList.toggle('hidden');
+    });
+  </script>
+
+
+
+
+    </main>
 </body>
 </html>
