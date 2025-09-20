@@ -1,0 +1,44 @@
+
+@import "tailwindcss";
+
+/* Story Script Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+/* Inter Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Story+Script&display=swap');
+
+/*  npx @tailwindcss/cli -i ./src/styles/main.css -o ./src/styles/global.css --watch   */
+
+
+:root {
+  /* Background Color */
+  --light-bg: #f4f4f4;      /* Light background */
+  --oxford-blue: #020f59;   /* Oxford Blue */
+
+
+  /* Text Color */
+  --main-text: #010626;     /* Rich Black */
+  --text-900: #0f0f0f;      /* Very dark text */
+  --text-800: #1c1c1c;      /* Dark text */
+  
+  /* Hover Effect */
+  --primary-hover: #021373;            /* Primary blue */
+  --border-hover: #7a7a7a;  /* Border hover */
+  --form-border: #9b9b9b;   /* Form border */
+  --hover-state: #dcdcdc;   /* Hover state */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow color */
+  --shadow-hover: rgba(0, 0, 0, 0.2); /* Shadow hover */
+
+  /* Customize */
+  --disabled-text: #3c3c3c; /* Disabled text */
+  --diasabled-bg: #5a5a5a;  /* Disabled background */
+  --input-bg: #bfbfbf;      /* Input background */
+
+
+    /* Font Families */
+    --font-primary: 'Inter', sans-serif;    /* Primary text */
+    --font-title: 'Story Script', cursive;  /* Story Script for headings */
+    --font-sub-text: 'Inter', sans-serif;   /* Subtext */
+
+}
+
+
